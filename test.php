@@ -8,7 +8,7 @@ foreach($fileArray as $line){
 	// does not compare previous items since its not neccessary.
 	for($i = $index + 1; $i < count($fileArray); $i++){
 		if(isAnagram($line, $fileArray[$i])){
-			// we are comaring the item to itself
+			// we are not comaring the item to itself
 			echo $line . " is an anagram of " . $fileArray[$i];
 		}
 	}
@@ -26,7 +26,7 @@ function isAnagram($word_one, $word_two){
 	// sort the arrays
 	sort($array1);
 	sort($array2);
-	
+
 	// compare the sorted arrays.
 	if($array1 === $array2)
 		return true;
